@@ -30,7 +30,7 @@ export function Guild({data, ...rest}: Props){
       activeOpacity={0.7}
       {...rest}
     >
-        <GuildIcon />
+        <GuildIcon guildId={data.id} iconId={data.icon} />
 
         <View style={styles.content}>
           <View>
@@ -39,7 +39,7 @@ export function Guild({data, ...rest}: Props){
             </Text>
 
             <Text style={styles.type}>
-              { data.owen ? 'Administrador' : 'Convidado'}
+              { data.owner ? 'Administrador' : 'Convidado'}
             </Text>
           </View>
         </View>
